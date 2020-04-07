@@ -1,0 +1,53 @@
+/*Gracias a esto, si tienes un elemento y le defines un ancho, al agregar padding no le va a afectar*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img{
+  max-width: 100%;
+  background-attachment: fixed;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+h2{
+  font-family: 'Noto Serif', serif;;
+}
+
+.logo{
+  max-width: 100px;
+  width: 70px;
+}
+
+.logo2{
+  max-width: 100px;
+  position: center center;
+  margin-top: 10px;
+  height: 50px;
+  width: auto;
+}
+
+.bg-form{
+  background-image:linear-gradient(rgba(255, 255, 255, 0.6),
+  rgba(255,255,255,.6)),
+  url(/img/Logo\ Alivio\ transparente.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+/**Header**/
+
+.site-header{
+  background-color: #754B8B;
+}
+
+.form-header{
+  background-color: #D7C1E3;
+}
