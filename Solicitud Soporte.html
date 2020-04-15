@@ -44,8 +44,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse vanbar-collapse" id="firstNavbar">
-                <ul class="navbar-nav ml-auto">
-                    
+                <ul class="navbar-nav ml-auto">                    
                     <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -149,7 +148,8 @@
                 <div class="card shadow-lg p-3 mb-5 bg-white">
                     <div class="card-header form-header font-weight-bold">Formulario Soporte Técnico</div>
                     <div class="card-body bg-form">
-                        <form id="form1" method="post" class="need-validation" novalidate>
+                        <form id="form1" name="formulario1" method="post" class="need-validation" novalidate>
+                            <!--Sección Datos Personales-->
                             <h5 class="mt-2 text-secondary">Datos Personales</h5>
                             <div class="form-row">
                                 <div class="col-md-4 mb-3">
@@ -164,32 +164,36 @@
                                     <label for="apellidoMat" class="font-weight-bolder text-black">Apellido Materno:</label>
                                     <input type="text" class="form-control" id="apellidoMat" placeholder="Apellido Materno" required>
                                 </div>      
+                            </div>     
+                            <!--Sección Campaña-->
+                            <div id="campaña">                   
+                                <h5 class="mt-2 text-secondary">Campaña</h5>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="cargo" class="font-weight-bolder text-black">Cargo:</label>
+                                        <select name="cosa" class="form-control" required onchange="cambia()">
+                                            <option value="" disabled selected>--Seleccionar--</option>
+                                            <option value="">Administrativo</option>
+                                            <option value="">Team Lider</option>
+                                            <option value="">Asesor@</option>
+                                            <option value="">Otro</option>
+                                        </select>
+                                    </div>   
+                                    <div class="col-md-4 mb-3">
+                                        <label for="area" class="font-weight-bolder text-black">Area:</label>
+                                        <select id="opciones" class="form-control" required>
+                                            <option value="" disabled selected>--Seleccionar--</option>
+                                            <option value="">Administración</option>
+                                            <option value="">AliviandoT</option>
+                                            <option value="">AsesMedic</option>
+                                            <option value="">Hospitales</option>
+                                            <option value="">MasSalud</option>
+                                            <option value="">SaludCorp</option>
+                                        </select>
+                                    </div>                
+                                </div>
                             </div>
-                            <h5 class="mt-2 text-secondary">Campaña</h5>
-                            <div class="form-row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="cargo" class="font-weight-bolder text-black">Cargo:</label>
-                                    <select id="opciones" class="form-control" required>
-                                        <option value="" disabled selected>--Seleccionar--</option>
-                                        <option value="">Administrativo</option>
-                                        <option value="">Team Lider</option>
-                                        <option value="">Asesor@</option>
-                                        <option value="">Otro</option>
-                                    </select>
-                                </div>   
-                                <div class="col-md-4 mb-3">
-                                    <label for="area" class="font-weight-bolder text-black">Area:</label>
-                                    <select id="opciones" class="form-control" required>
-                                        <option value="" disabled selected>--Seleccionar--</option>
-                                        <option value="">Administración</option>
-                                        <option value="">AliviandoT</option>
-                                        <option value="">AsesMedic</option>
-                                        <option value="">Hospitales</option>
-                                        <option value="">MasSalud</option>
-                                        <option value="">SaludCorp</option>
-                                    </select>
-                                </div>                
-                            </div>
+                            <!--Sección CContacto-->
                             <h5 class="mt-2 text-secondary">Contacto</h5>
                             <div class="form-row">
                                 <div class="col-md-4 mb-3">
@@ -201,7 +205,7 @@
                                     <input type="text" name="contacto" id="telefono" class="form-control" placeholder="55-55-55-55-55">                
                                 </div>
                             </div>
-
+                            <!--Sección Fecha y Hora-->
                             <h5 class="mt-2 text-secondary">Fecha y Hora</h5>
                             <div class="form-row">
                                 <div class="col-md-4 mb-3">
@@ -213,15 +217,15 @@
                                     <input class="form-control" type="time" id="hora" min="08:00" max="15:00 ">
                                 </div>                
                             </div>
+                            <!--Sección Agregados-->
                             <h5 class="mt-2 text-secondary">Agregados</h5>
-                            <div class="form-row">       
-                            </div>
                             <div class="form-row">
                                 <div class="mx-5 my-4 d-flex align-items-end col-md-4">      
                                     <label for="evidencias" class="font-weight-bolder text-black mr-5 align">Evidencias:</label>                      
                                     <input type="file" name="myImage" accept="image/*" />
                                 </div> 
                             </div>
+                            <!--Sección Descripción-->
                             <div class="form-row">
                                 <div class="input-group col-md-4mb-3 d-flex flex-column" style="height: 300px;">        
                                     <label for="descripcion" class="font-weight-bolder text-black">Descripción</label>    
@@ -229,6 +233,7 @@
                                     <textarea class="form-control" placeholder="Por favor da una descripcion detallada del problema" id="descripcion"></textarea>
                                 </div>
                             </div>     
+                            <!--Botón Enviar-->
                             <input type="submit" value="Enviar" class="btn btn-primary mt-5 d-flex align-items-center px-5 font-weight-bolder"> 
                         </form>
                     </div>
@@ -239,9 +244,9 @@
 
     
 
-
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>
