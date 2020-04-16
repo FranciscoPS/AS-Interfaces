@@ -44,8 +44,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse vanbar-collapse" id="firstNavbar">
-                <ul class="navbar-nav ml-auto">
-                    
+                <ul class="navbar-nav ml-auto">                    
                     <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -142,94 +141,111 @@
     </nav>
 
     <!--Formulario-->
-    <h2 class="font-weight-normal text-center mt-3 mb-3">Solicitud de Soporte</h2>
+    <h2 class="font-weight-normal text-center mt-3 mb-3">Solicitud de Equipo</h2>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card shadow-lg p-3 mb-5 bg-white">
-                    <div class="card-header form-header font-weight-bold">Formulario Soporte Técnico</div>
+                    <div class="card-header form-header font-weight-bold">Solicitud de equipo</div>
                     <div class="card-body bg-form">
-                        <form id="form1" method="post" class="need-validation" novalidate>
-                            <h5 class="mt-2 text-secondary">Datos Personales</h5>
-                            <div class="form-row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="nombre" class="font-weight-bolder text-black">Nombre:</label>
-                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre(s)" required>
+                        <form id="form1" name="formulario1" method="post" class="need-validation" novalidate>
+                            <!--Fecha solicitud-->
+                            <div id="fechaSolicitud">                            
+                                <h5 class="mt-2 text-secondary">Fecha de la solicitud</h5>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="fecha" class="font-weight-bolder text-black">Fecha:</label>
+                                        <input type="date" id="fecha" class="form-control">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="hora" class="font-weight-bolder text-black">Hora:</label>
+                                        <input class="form-control" type="time" id="hora" min="08:00" max="15:00 ">
+                                    </div>                
+                                </div>
+                            </div>
+                            <!--Datos de responsable-->
+                            <div id="datosResponsable">
+                                <h5 class="mt-2 text-secondary">Datos personales</h5>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="nombre" class="font-weight-bolder text-black">Nombre:</label>
+                                        <input type="text" class="form-control" id="nombre" placeholder="Nombre(s)" required>
+                                    </div>      
+                                    <div class="col-md-4 mb-3">
+                                        <label for="apellidoPat" class="font-weight-bolder text-black">Apellido Paterno:</label>
+                                        <input type="text" class="form-control" id="apellidoPat" placeholder="Apellido Paterno" required>
+                                    </div>     
+                                    <div class="col-md-4 mb-3">
+                                        <label for="apellidoMat" class="font-weight-bolder text-black">Apellido Materno:</label>
+                                        <input type="text" class="form-control" id="apellidoMat" placeholder="Apellido Materno" required>
+                                    </div>      
+                                </div>    
+                            </div> 
+                            <!--Sección Area-->
+                            <div id="areaResponsable">                   
+                                <h5 class="mt-2 text-secondary">Area</h5>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="area" class="font-weight-bolder text-black">Area:</label>
+                                        <select id="opciones" class="form-control" required>
+                                            <option value="" disabled selected>--Seleccionar--</option>
+                                            <option value="">Administración</option>
+                                            <option value="">AliviandoT</option>
+                                            <option value="">AsesMedic</option>
+                                            <option value="">Hospitales</option>
+                                            <option value="">MasSalud</option>
+                                            <option value="">SaludCorp</option>
+                                        </select>
+                                    </div>                                                
+                                </div>
+                            </div>
+                            <!--Check Boxes-->
+                            <div id="Tipo de solicitud">                   
+                                <h5 class="mt-2 text-secondary mb-4">Tipo de solicitud</h5>  
+                                <div class="form-row">                            
+                                    <div class="input-group mb-3 col-md-4">
+                                        <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input type="checkbox"  aria-label="Checkbox for following text input" id="nuevaAsig">
+                                        </div>
+                                        </div>
+                                        <label for="nuevaAsig" class="form-control font-weight-bolder text-black">Nueva Asignacion</label>
+                                    </div>     
+                                    <div class="input-group mb-3 col-md-4">
+                                        <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input type="checkbox"  aria-label="Checkbox for following text input" id="cambioEquipo">
+                                        </div>
+                                        </div>
+                                        <label for="cambioEquipo" class="form-control font-weight-bolder text-black">Cambio de Equipo</label>
+                                    </div>  
+                                </div>                           
+                            </div>
+                            <!--Cantidad de equipos-->
+                            <div id="cantidadEquipos" class="mt-3">         
+                                <div class="d-flex">
+                                    <h5 class="mt-2 text-secondary mb-4">Cantidad de equipos</h5>   
+                                    <div id="agregarEquipo" class="ml-5">
+                                        <input name="agregar" type="button" value="Agregar" onClick="agregarEquipo()" class="btn btn-info align-items-center font-weight-bolder">
+                                    </div> 
+                                    <div id="quitarEquipo" class="ml-2">
+                                        <input name="agregar" type="button" value="Quitar" onClick="quitarEquipo()" class="btn btn-danger align-items-center font-weight-bolder">
+                                    </div> 
                                 </div>      
-                                <div class="col-md-4 mb-3">
-                                    <label for="apellidoPat" class="font-weight-bolder text-black">Apellido Paterno:</label>
-                                    <input type="text" class="form-control" id="apellidoPat" placeholder="Apellido Paterno" required>
-                                </div>     
-                                <div class="col-md-4 mb-3">
-                                    <label for="apellidoMat" class="font-weight-bolder text-black">Apellido Materno:</label>
-                                    <input type="text" class="form-control" id="apellidoMat" placeholder="Apellido Materno" required>
-                                </div>      
-                            </div>
-                            <h5 class="mt-2 text-secondary">Campaña</h5>
-                            <div class="form-row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="cargo" class="font-weight-bolder text-black">Cargo:</label>
-                                    <select id="opciones" class="form-control" required>
-                                        <option value="" disabled selected>--Seleccionar--</option>
-                                        <option value="">Administrativo</option>
-                                        <option value="">Team Lider</option>
-                                        <option value="">Asesor@</option>
-                                        <option value="">Otro</option>
-                                    </select>
-                                </div>   
-                                <div class="col-md-4 mb-3">
-                                    <label for="area" class="font-weight-bolder text-black">Area:</label>
-                                    <select id="opciones" class="form-control" required>
-                                        <option value="" disabled selected>--Seleccionar--</option>
-                                        <option value="">Administración</option>
-                                        <option value="">AliviandoT</option>
-                                        <option value="">AsesMedic</option>
-                                        <option value="">Hospitales</option>
-                                        <option value="">MasSalud</option>
-                                        <option value="">SaludCorp</option>
-                                    </select>
-                                </div>                
-                            </div>
-                            <h5 class="mt-2 text-secondary">Contacto</h5>
-                            <div class="form-row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="correo" class="font-weight-bolder text-black">E-mail</label>                              
-                                    <input type="text" name="contacto" value="correo" id="correo" class="form-control" placeholder="domain@example.com">                
-                                </div> 
-                                <div class="col-md-4 mb-3">
-                                    <label for="telefono" class="font-weight-bolder text-black">Teléfono</label>                     
-                                    <input type="text" name="contacto" id="telefono" class="form-control" placeholder="55-55-55-55-55">                
+                                <div class='form-row'>
+                                    <div class='col-md-4 mb-3'>
+                                        <label for='equipos' class='font-weight-bolder text-black'>Equipo</label>
+                                    </div>
+                                    <div class='col-md-4 mb-3'>
+                                        <label for='equipos' class='font-weight-bolder text-black'>Cantidad</label>
+                                    </div>
                                 </div>
                             </div>
-
-                            <h5 class="mt-2 text-secondary">Fecha y Hora</h5>
-                            <div class="form-row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="fecha" class="font-weight-bolder text-black">Fecha:</label>
-                                    <input type="date" id="fecha" class="form-control">
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="hora" class="font-weight-bolder text-black">Hora:</label>
-                                    <input class="form-control" type="time" id="hora" min="08:00" max="15:00 ">
-                                </div>                
+                            
+                            <!--Botón Enviar-->
+                            <div id="enviar">
+                                <input type="submit" value="Enviar" class="btn btn-info mt-5 d-flex align-items-center px-5 font-weight-bolder"> 
                             </div>
-                            <h5 class="mt-2 text-secondary">Agregados</h5>
-                            <div class="form-row">       
-                            </div>
-                            <div class="form-row">
-                                <div class="mx-5 my-4 d-flex align-items-end col-md-4">      
-                                    <label for="evidencias" class="font-weight-bolder text-black mr-5 align">Evidencias:</label>                      
-                                    <input type="file" name="myImage" accept="image/*" />
-                                </div> 
-                            </div>
-                            <div class="form-row">
-                                <div class="input-group col-md-4mb-3 d-flex flex-column" style="height: 300px;">        
-                                    <label for="descripcion" class="font-weight-bolder text-black">Descripción</label>    
-                                    <br>                 
-                                    <textarea class="form-control" placeholder="Por favor da una descripcion detallada del problema" id="descripcion"></textarea>
-                                </div>
-                            </div>     
-                            <input type="submit" value="Enviar" class="btn btn-primary mt-5 d-flex align-items-center px-5 font-weight-bolder"> 
                         </form>
                     </div>
                 </div>
@@ -239,9 +255,9 @@
 
     
 
-
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>

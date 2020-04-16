@@ -150,21 +150,23 @@
                     <div class="card-body bg-form">
                         <form id="form1" name="formulario1" method="post" class="need-validation" novalidate>
                             <!--Sección Datos Personales-->
-                            <h5 class="mt-2 text-secondary">Datos Personales</h5>
-                            <div class="form-row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="nombre" class="font-weight-bolder text-black">Nombre:</label>
-                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre(s)" required>
-                                </div>      
-                                <div class="col-md-4 mb-3">
-                                    <label for="apellidoPat" class="font-weight-bolder text-black">Apellido Paterno:</label>
-                                    <input type="text" class="form-control" id="apellidoPat" placeholder="Apellido Paterno" required>
-                                </div>     
-                                <div class="col-md-4 mb-3">
-                                    <label for="apellidoMat" class="font-weight-bolder text-black">Apellido Materno:</label>
-                                    <input type="text" class="form-control" id="apellidoMat" placeholder="Apellido Materno" required>
-                                </div>      
-                            </div>     
+                            <div id="datos">
+                                <h5 class="mt-2 text-secondary">Datos Personales</h5>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="nombre" class="font-weight-bolder text-black">Nombre:</label>
+                                        <input type="text" class="form-control" id="nombre" placeholder="Nombre(s)" required>
+                                    </div>      
+                                    <div class="col-md-4 mb-3">
+                                        <label for="apellidoPat" class="font-weight-bolder text-black">Apellido Paterno:</label>
+                                        <input type="text" class="form-control" id="apellidoPat" placeholder="Apellido Paterno" required>
+                                    </div>     
+                                    <div class="col-md-4 mb-3">
+                                        <label for="apellidoMat" class="font-weight-bolder text-black">Apellido Materno:</label>
+                                        <input type="text" class="form-control" id="apellidoMat" placeholder="Apellido Materno" required>
+                                    </div>      
+                                </div>    
+                            </div> 
                             <!--Sección Campaña-->
                             <div id="campaña">                   
                                 <h5 class="mt-2 text-secondary">Campaña</h5>
@@ -194,47 +196,57 @@
                                 </div>
                             </div>
                             <!--Sección CContacto-->
-                            <h5 class="mt-2 text-secondary">Contacto</h5>
-                            <div class="form-row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="correo" class="font-weight-bolder text-black">E-mail</label>                              
-                                    <input type="text" name="contacto" value="correo" id="correo" class="form-control" placeholder="domain@example.com">                
-                                </div> 
-                                <div class="col-md-4 mb-3">
-                                    <label for="telefono" class="font-weight-bolder text-black">Teléfono</label>                     
-                                    <input type="text" name="contacto" id="telefono" class="form-control" placeholder="55-55-55-55-55">                
+                            <div id="contacto">
+                                <h5 class="mt-2 text-secondary">Contacto</h5>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="correo" class="font-weight-bolder text-black">E-mail</label>                              
+                                        <input type="text" name="contacto" value="correo" id="correo" class="form-control" placeholder="domain@example.com">                
+                                    </div> 
+                                    <div class="col-md-4 mb-3">
+                                        <label for="telefono" class="font-weight-bolder text-black">Teléfono</label>                     
+                                        <input type="text" name="contacto" id="telefono" class="form-control" placeholder="55-55-55-55-55">                
+                                    </div>
                                 </div>
                             </div>
                             <!--Sección Fecha y Hora-->
-                            <h5 class="mt-2 text-secondary">Fecha y Hora</h5>
-                            <div class="form-row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="fecha" class="font-weight-bolder text-black">Fecha:</label>
-                                    <input type="date" id="fecha" class="form-control">
+                            <div id="fecha">                            
+                                <h5 class="mt-2 text-secondary">Fecha y Hora</h5>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="fecha" class="font-weight-bolder text-black">Fecha:</label>
+                                        <input type="date" id="fecha" class="form-control">
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="hora" class="font-weight-bolder text-black">Hora:</label>
+                                        <input class="form-control" type="time" id="hora" min="08:00" max="15:00 ">
+                                    </div>                
                                 </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="hora" class="font-weight-bolder text-black">Hora:</label>
-                                    <input class="form-control" type="time" id="hora" min="08:00" max="15:00 ">
-                                </div>                
                             </div>
                             <!--Sección Agregados-->
-                            <h5 class="mt-2 text-secondary">Agregados</h5>
-                            <div class="form-row">
-                                <div class="mx-5 my-4 d-flex align-items-end col-md-4">      
-                                    <label for="evidencias" class="font-weight-bolder text-black mr-5 align">Evidencias:</label>                      
-                                    <input type="file" name="myImage" accept=".pdf,.png,.jpg" multiple/>
-                                </div> 
+                            <div id="agregados">
+                                <h5 class="mt-2 text-secondary">Agregados</h5>
+                                <div class="form-row">
+                                    <div class="mx-5 my-4 d-flex align-items-end col-md-4">      
+                                        <label for="evidencias" class="font-weight-bolder text-black mr-5 align">Evidencias:</label>                      
+                                        <input type="file" name="myImage" accept=".pdf,.png,.jpg" multiple/>
+                                    </div> 
+                                </div>
                             </div>
                             <!--Sección Descripción-->
-                            <div class="form-row">
-                                <div class="input-group col-md-4mb-3 d-flex flex-column" style="height: 300px;">        
-                                    <label for="descripcion" class="font-weight-bolder text-black">Descripción</label>    
-                                    <br>                 
-                                    <textarea class="form-control" placeholder="Por favor da una descripcion detallada del problema" id="descripcion"></textarea>
-                                </div>
-                            </div>     
+                                <div id="descripcion">
+                                <div class="form-row">
+                                    <div class="input-group col-md-4mb-3 d-flex flex-column" style="height: 300px;">        
+                                        <label for="descripcion" class="font-weight-bolder text-black">Descripción</label>    
+                                        <br>                 
+                                        <textarea class="form-control" placeholder="Por favor da una descripcion detallada del problema" id="descripcion"></textarea>
+                                    </div>
+                                </div>     
+                            </div>
                             <!--Botón Enviar-->
-                            <input type="submit" value="Enviar" class="btn btn-primary mt-5 d-flex align-items-center px-5 font-weight-bolder"> 
+                            <div id="enviar">
+                                <input type="submit" value="Enviar" class="btn btn-primary mt-5 d-flex align-items-center px-5 font-weight-bolder"> 
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -34,7 +34,7 @@ h2{
 }
 
 .bg-form{
-  background-image:linear-gradient(rgba(255, 255, 255, 0.6),
+  background-image:linear-gradient(rgba(255, 255, 255, 0.95),
   rgba(255,255,255,.6)),
   url(/img/Logo\ Alivio\ transparente.png);
   background-position: center center;
