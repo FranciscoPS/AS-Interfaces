@@ -165,7 +165,7 @@
                             </div>
                             <!--Datos de responsable-->
                             <div id="datosResponsable">
-                                <h5 class="mt-2 text-secondary">Datos personales</h5>
+                                <h5 class="mt-2 text-secondary">Responsable</h5>
                                 <div class="form-row">
                                     <div class="col-md-4 mb-3">
                                         <label for="nombre" class="font-weight-bolder text-black">Nombre:</label>
@@ -200,24 +200,24 @@
                                 </div>
                             </div>
                             <!--Check Boxes-->
-                            <div id="Tipo de solicitud">                   
+                            <div id="tipo_solicitud">                   
                                 <h5 class="mt-2 text-secondary mb-4">Tipo de solicitud</h5>  
                                 <div class="form-row">                            
                                     <div class="input-group mb-3 col-md-4">
                                         <div class="input-group-prepend">
                                         <div class="input-group-text">
-                                            <input type="checkbox"  aria-label="Checkbox for following text input" id="nuevaAsig">
+                                            <input type="checkbox" name="nuevaAs"  aria-label="Checkbox for following text input" id="nueva_asig">
                                         </div>
                                         </div>
-                                        <label for="nuevaAsig" class="form-control font-weight-bolder text-black">Nueva Asignacion</label>
+                                        <label for="nueva_asig" class="form-control font-weight-bolder text-black">Nueva Asignacion</label>
                                     </div>     
                                     <div class="input-group mb-3 col-md-4">
                                         <div class="input-group-prepend">
                                         <div class="input-group-text">
-                                            <input type="checkbox"  aria-label="Checkbox for following text input" id="cambioEquipo">
+                                            <input type="checkbox" name="cambioEq" id="cambio_equipo" onclick="agregarCambioEq()">
                                         </div>
                                         </div>
-                                        <label for="cambioEquipo" class="form-control font-weight-bolder text-black">Cambio de Equipo</label>
+                                        <label for="cambio_equipo" class="form-control font-weight-bolder text-black">Cambio de Equipo</label>
                                     </div>  
                                 </div>                           
                             </div>
@@ -229,7 +229,7 @@
                                         <input name="agregar" type="button" value="Agregar" onClick="agregarEquipo()" class="btn btn-info align-items-center font-weight-bolder">
                                     </div> 
                                     <div id="quitarEquipo" class="ml-2">
-                                        <input name="agregar" type="button" value="Quitar" onClick="quitarEquipo()" class="btn btn-danger align-items-center font-weight-bolder">
+                                        <input name="agregar" type="button" value="Quitar" onClick="quitarEquipo()" class="btn btn-dark align-items-center font-weight-bolder">
                                     </div> 
                                 </div>      
                                 <div class='form-row'>
@@ -240,8 +240,7 @@
                                         <label for='equipos' class='font-weight-bolder text-black'>Cantidad</label>
                                     </div>
                                 </div>
-                            </div>
-                            
+                            </div>                            
                             <!--Botón Enviar-->
                             <div id="enviar">
                                 <input type="submit" value="Enviar" class="btn btn-info mt-5 d-flex align-items-center px-5 font-weight-bolder"> 

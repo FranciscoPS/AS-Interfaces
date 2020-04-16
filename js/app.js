@@ -1,4 +1,6 @@
 
+var tope = 1;
+
 function cambia(){
 
     let campoOtro = "<div class='form-row' id='campoOtro'><div class='col-md-4 mb-3'><label for='nombre' class='font-weight-bolder text-black'>Otro:</label><input type='text' class='form-control' id='otro' placeholder='Especifique' required></div></div>";
@@ -17,7 +19,19 @@ function cambia(){
     
 }
 
-var tope = 1;
+function agregarCambioEq() {
+    let cambioEquipo = $('input:checkbox[name=cambioEq]:checked').val();
+    let camposCambio = "<div id='datosCambio' class='mb-5'><h5 class='mt-4 text-secondary mb-2'>Datos del equipo anterior</h5><div class='form-row'><div class='col-md-4 mb-3'><label for='folio_equipo' class='font-weight-bolder text-black'>Folio:</label><input type='text' class='form-control' id='folio_equipo' placeholder='Folio de equipo' required></div><div class='col-md-4 mb-3'><label for='num_serie' class='font-weight-bolder text-black'>Numero de serie:</label><input type='text' class='form-control' id='num_serie' placeholder='Numero de serie' required></div><div class='col-md-4 mb-3'><label for='modelo_equipo' class='font-weight-bolder text-black'>Modelo de equipo:</label><input type='text' class='form-control' id='modelo_equipo' placeholder='Modelo del equipo' required></div></div></div>"
+
+    if(cambioEquipo == 'on'){
+        $('#tipo_solicitud').append(camposCambio);
+        console.log('Estoy aqui');
+    }else{
+        $('#datosCambio').remove();
+        console.log('Sali de aqui');
+    }    
+}
+
 function agregarEquipo() {
     
     let camposEquipos = "<div class='form-row' id='equipoAgregado'><div class='col-md-4 mb-3'><select id='equipos' class='form-control' required><option value='' disabled selected>--Seleccionar--</option><option value=''>Computadora</option><option value=''>Cargador</option><option value=''>Celular</option></select></div><div class='col-md-4 mb-3'><select id='cantidad' class='form-control' required>   <option value='' disabled selected>--Seleccionar--</option><option value=''>1</option><option value=''>2</option><option value=''>3</option><option value=''>4</option><option value=''>5</option><option value=''>6</option><option value=''>7</option><option value=''>8</option><option value=''>9</option></select></div></div>"
