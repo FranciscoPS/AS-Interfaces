@@ -9,20 +9,75 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
     <!--VENTANAS EMERGENTES-->
     <!--Info Fecha-->
-    <div class="ventana-info" id="ventFecha">
-        <a href="javascript:cerrarVentana('ventFecha')" class="botonCerrar">
-            <i class="fa fa-times-circle-o fa-2x" aria-hidden="true"></i>
-        </a>
-        <h1 class="bolder">Fecha de solicitud</h1>
-        <p>Por favor introduce la fecha y hora en la que se realiza la solicitud.<br>En caso de que la solicitud haya sido realizada en días anteriores, introduce dicha hora.</p>
+    <div id="overlay">
+        <div class="ventana-info" id="ventFecha">
+            <a href="javascript:cerrarVentana('ventFecha')" class="botonCerrar">
+                <i class="fa fa-times-circle-o fa-2x" aria-hidden="true"></i>
+            </a>
+            <h1>Fecha de solicitud</h1>
+            <p>Por favor introduce la fecha y hora en la que se realiza la solicitud.<br>En caso de que la solicitud haya sido realizada en días anteriores, introduce dicha hora.</p>
+        </div>
     </div>
 
+    <!--Info Responsable-->
+    <div id="overlay">
+        <div class="ventana-info" id="ventResponsable">
+            <a href="javascript:cerrarVentana('ventResponsable')" class="botonCerrar">
+                <i class="fa fa-times-circle-o fa-2x" aria-hidden="true"></i>
+            </a>
+            <h1>Responsable</h1>
+            <p>Por favor introduce el nombre completo del usuario que se hará responsable del equipo, en caso de cualquier daño al equipo, este mismo será el responsable de la reparación o pérdida total.<br><br>Para mayor info. favor de consultar las políticas y reglamento en la responsiva.</p>
+        </div>
+    </div>
+
+    <!--Info Area-->
+    <div id="overlay">
+        <div class="ventana-info" id="ventArea">
+            <a href="javascript:cerrarVentana('ventArea')" class="botonCerrar">
+                <i class="fa fa-times-circle-o fa-2x" aria-hidden="true"></i>
+            </a>
+            <h1>Area</h1>
+            <p>Por favor selecciona el área a la que perteneces y la persona superior que esta autorizando este proceso.</p>
+        </div>
+    </div>
+
+    <!--Info Tipo De Solicitud-->
+    <div id="overlay">
+        <div class="ventana-info" id="ventTipoSol">
+            <a href="javascript:cerrarVentana('ventTipoSol')" class="botonCerrar">
+                <i class="fa fa-times-circle-o fa-2x" aria-hidden="true"></i>
+            </a>
+            <h1>Tipo de solicitud</h1>
+            <p>Por favor selecciona el tipo de solicitud, ya sea <b>Nueva Asignación</b> o <b>Cambio de Equipo</b><br>Agrega el tipo de equipo que necesitas, ya sea <b>computadora, celular o cargador.</b><br>Puedes agregar máximo 3 equipos distintos.</p>
+        </div>
+    </div>
+
+    <!--Info Terminos y Condiciones-->
+    <div id="overlay">
+        <div class="ventana-terminos" id="ventTerminos">
+            <a href="javascript:cerrarVentana('ventTerminos')" class="botonCerrar">
+                <i class="fa fa-times-circle-o fa-2x" aria-hidden="true"></i>
+            </a>
+            <h1>Terminos y Condiciones</h1>
+            <p>El Corporativo Alivio Seguro pone a disposición la herramienta de trabajo con sentido de préstamo, a nuestro colaborador(a) el (la) C.________________________. Quien en adelante se reconocerá como “El COLABORADOR (A)”, quien promete hacer uso responsable de los equipos asignados, en caso contrario se hará acreedor a un acta administrativa, para evitar lo antes mencionado, El COLABORADOR (A) deberá de cumplir con los siguientes lineamientos:
+                El COLABORADOR (A) tiene prohibido:
+                1. Hacer uso de la herramienta para situaciones personales, aplicando principalmente a los equipos móviles, es decir, el equipo prestado, es y será exclusivamente para el uso relacionado con y para la EMPRESA.
+                2. Tiene prohibido la descarga de aplicaciones de la playstore o terceros, con sentido de entretenimiento y multimedia. En caso de ser una situación especial solicitar el VoBo del Director del área asignada, vía correo con copia al área de sistemas.
+                3. El COLABORADOR (A), no pude transferir el (los) equipo (os) sin hacer la notificación debida al departamento de SOPORTE TECNICO.
+                En caso de extravío o pérdida total del equipo, EL COLABORADOR (A) deberá cubrir el costo total de reposición, más una penalización de 500 o 1000 pesos dependiendo del equipo (solo aplica en celulares y laptops), el valor del mismo será determinado por el área de sistemas. En caso de robo, es obligatorio presentar la denuncia para condonar la penalización, de caso contrario, EL COLABORADOR (A) deberá de hacerse responsable del pago total del (los) equipo (os).
+                Términos y Condiciones
+                 EL COLABORADOR (A) tiene la responsabilidad de notificar de manera inmediata al área de sistemas cualquier tema en relación a la herramienta de trabajo asignadas.
+                 En toda asignación EL COLABORADOR (A) tiene como máximo 15 días hábiles para reportar cualquier desperfecto o falla de los equipos asignados, en caso contrario EL COLABORADOR (A) se hará responsable del costo de reparación o bien del costo total del (los) equipo (os).
+                 EL COLABORADOR (A) se comprometerá al cuidado de la herramienta de trabajo reconocida por cantidad, modelo, y número de Folio previamente descritos, en caso contrario podrán aplicar las clausulas antes mencionadas dependiendo de cuál sea el caso.</p>
+        </div>
+    </div>
 
     <!--Header-->
     <header class="site-header navbar navbar-expand">
@@ -181,8 +236,13 @@
                                 </div>
                             </div>
                             <!--Datos de responsable-->
-                            <div id="datosResponsable">
-                                <h5 class="mt-2 text-secondary">Responsable</h5>
+                            <div id="datosResponsable">                                
+                                <div class="d-flex">
+                                    <h5 class="mt-2 text-secondary">Responsable</h5>
+                                    <a href="javascript:abrirVentana('ventResponsable')" class="info-icon">
+                                        <i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+                                    </a>                 
+                                </div>
                                 <div class="form-row">
                                     <div class="col-md-4 mb-3">
                                         <label for="nombre" class="font-weight-bolder text-black">Nombre:</label>
@@ -199,8 +259,13 @@
                                 </div>    
                             </div> 
                             <!--Sección Area-->
-                            <div id="areaResponsable">                   
-                                <h5 class="mt-2 text-secondary">Area</h5>
+                            <div id="areaResponsable">  
+                                <div class="d-flex">
+                                    <h5 class="mt-2 text-secondary">Area</h5>
+                                    <a href="javascript:abrirVentana('ventArea')" class="info-icon">
+                                        <i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+                                    </a>                 
+                                </div>                  
                                 <div class="form-row">
                                     <div class="col-md-4 mb-3">
                                         <label for="area" class="font-weight-bolder text-black">Area:</label>
@@ -213,12 +278,25 @@
                                             <option value="">MasSalud</option>
                                             <option value="">SaludCorp</option>
                                         </select>
-                                    </div>                                                
+                                    </div>                                          
+                                    <div class="col-md-4 mb-3">
+                                        <label for="nombreSup" class="font-weight-bolder text-black">Nombre de Superior:</label>
+                                        <input type="text" class="form-control" id="nombreSup" placeholder="Nombre de Superior" required>
+                                    </div>     
+                                    <div class="col-md-4 mb-3">
+                                        <label for="apellidoSup" class="font-weight-bolder text-black">Apellido de Superior:</label>
+                                        <input type="text" class="form-control" id="apellidoSup" placeholder="Apellido de Superior" required>
+                                    </div>                                                                     
                                 </div>
                             </div>
                             <!--Check Boxes-->
-                            <div id="tipo_solicitud">                   
-                                <h5 class="mt-2 text-secondary mb-4">Tipo de solicitud</h5>  
+                            <div id="tipo_solicitud">     
+                                <div class="d-flex">
+                                    <h5 class="mt-2 text-secondary mb-4">Tipo de solicitud</h5>
+                                    <a href="javascript:abrirVentana('ventTipoSol')" class="info-icon">
+                                        <i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+                                    </a>                 
+                                </div>                             
                                 <div class="form-row">                            
                                     <div class="input-group mb-3 col-md-4">
                                         <div class="input-group-prepend">
@@ -257,10 +335,28 @@
                                         <label for='equipos' class='font-weight-bolder text-black'>Cantidad</label>
                                     </div>
                                 </div>
-                            </div>                            
-                            <!--Botón Enviar-->
-                            <div id="enviar">
-                                <input type="submit" value="Enviar" class="btn btn-info mt-5 d-flex align-items-center px-5 font-weight-bolder"> 
+                            </div>         
+                            <!--Check Boxes-->
+                            <div id="tipo_solicitud">     
+                                                            
+                                <div class="form-row mt-5"> 
+
+                                    <div id="enviar" class="mb-3 col-md-4">
+                                        <input type="submit" value="Enviar" class="btn btn-info align-items-center px-5 font-weight-bolder"> 
+                                    </div>       
+
+                                    <div class="input-group mb-3 col-md-4 mt-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                <a href="javascript:abrirVentana('ventTerminos')" class="info-icon">
+                                                    Acepto terminos y condiciones
+                                                </a>
+                                            </label>
+                                          </div>
+                                    </div> 
+                                    
+                                </div>
                             </div>
                         </form>
                     </div>

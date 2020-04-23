@@ -70,6 +70,27 @@ function abrirVentana(vent) {
 
         case 'ventFecha':
             document.getElementById("ventFecha").style.display="block";
+            $('#overlay').addClass('overlay-class');
+        break;
+
+        case 'ventResponsable':
+            document.getElementById("ventResponsable").style.display="block";
+            $('#overlay').addClass('overlay-class');
+        break;
+
+        case 'ventArea':
+            document.getElementById("ventArea").style.display="block";
+            $('#overlay').addClass('overlay-class');
+        break;
+
+        case 'ventTipoSol':
+            document.getElementById("ventTipoSol").style.display="block";
+            $('#overlay').addClass('overlay-class');
+        break;
+
+        case 'ventTerminos':
+            document.getElementById("ventTerminos").style.display="block";
+            $('#overlay').addClass('overlay-class');
         break;
 
     }
@@ -84,6 +105,27 @@ function cerrarVentana(vent) {
 
         case 'ventFecha':
             document.getElementById("ventFecha").style.display="none";
+            $('#overlay').removeClass('overlay-class');
+        break;
+
+        case 'ventResponsable':
+            document.getElementById("ventResponsable").style.display="none";
+            $('#overlay').removeClass('overlay-class');
+        break;
+
+        case 'ventArea':
+            document.getElementById("ventArea").style.display="none";
+            $('#overlay').removeClass('overlay-class');
+        break;
+
+        case 'ventTipoSol':
+            document.getElementById("ventTipoSol").style.display="none";
+            $('#overlay').removeClass('overlay-class');
+        break;
+
+        case 'ventTerminos':
+            document.getElementById("ventTerminos").style.display="none";
+            $('#overlay').removeClass('overlay-class');
         break;
 
     }
