@@ -64,3 +64,28 @@ function quitarEquipo() {
     }    
 }
 
+function abrirVentana(vent) {
+
+    switch(vent){
+
+        case 'ventFecha':
+            document.getElementById("ventFecha").style.display="block";
+        break;
+
+    }
+    
+}
+
+function cerrarVentana(vent) {
+
+    console.log("CERRAR: "+vent);
+
+    switch(vent){
+
+        case 'ventFecha':
+            document.getElementById("ventFecha").style.display="none";
+        break;
+
+    }
+
+}

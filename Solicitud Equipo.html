@@ -13,6 +13,17 @@
 </head>
 <body>
 
+    <!--VENTANAS EMERGENTES-->
+    <!--Info Fecha-->
+    <div class="ventana-info" id="ventFecha">
+        <a href="javascript:cerrarVentana('ventFecha')" class="botonCerrar">
+            <i class="fa fa-times-circle-o fa-2x" aria-hidden="true"></i>
+        </a>
+        <h1 class="bolder">Fecha de solicitud</h1>
+        <p>Por favor introduce la fecha y hora en la que se realiza la solicitud.<br>En caso de que la solicitud haya sido realizada en días anteriores, introduce dicha hora.</p>
+    </div>
+
+
     <!--Header-->
     <header class="site-header navbar navbar-expand">
         <div class="container d-flex">            
@@ -150,8 +161,14 @@
                     <div class="card-body bg-form">
                         <form id="form1" name="formulario1" method="post" class="need-validation" novalidate>
                             <!--Fecha solicitud-->
-                            <div id="fechaSolicitud">                            
-                                <h5 class="mt-2 text-secondary">Fecha de la solicitud</h5>
+                            <div id="fechaSolicitud">                     
+                                <div class="d-flex">
+                                    <h5 class="mt-2 text-secondary">Fecha de la solicitud</h5>
+                                    <a href="javascript:abrirVentana('ventFecha')" class="info-icon">
+                                        <i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+                                    </a>                 
+                                </div>
+                                
                                 <div class="form-row">
                                     <div class="col-md-4 mb-3">
                                         <label for="fecha" class="font-weight-bolder text-black">Fecha:</label>
