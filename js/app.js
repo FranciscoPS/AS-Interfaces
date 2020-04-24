@@ -25,11 +25,24 @@ function agregarCambioEq() {
 
     if(cambioEquipo == 'on'){
         $('#tipo_solicitud').append(camposCambio);
-        console.log('Estoy aqui');
+        console.log('Agregue campo');
+        $("#nueva_asig").prop("checked", false);
+        console.log('Desmarque el otro check');        
     }else{
-        $('#datosCambio').remove();
-        console.log('Sali de aqui');
+        $('#datosCambio').remove();        
+        console.log('Quite campo');
     }    
+}
+
+function validarCheckNuevaAsig(){
+    let nuevaAsig = $('input:checkbox[name=nuevaAs]:checked').val();
+    console.log("Valor de check recibido: "+nuevaAsig);
+    if(nuevaAsig == 'on'){
+        $("#cambio_equipo").prop("checked", false);
+        console.log('Desmarque el otro check');
+        $('#datosCambio').remove();        
+        console.log('Quite campo');
+    }
 }
 
 function agregarEquipo() {
@@ -126,6 +139,7 @@ function cerrarVentana(vent) {
         case 'ventTerminos':
             document.getElementById("ventTerminos").style.display="none";
             $('#overlay').removeClass('overlay-class');
+            console.log("Recibi "+vent);
         break;
 
     }

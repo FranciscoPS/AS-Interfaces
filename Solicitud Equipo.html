@@ -62,20 +62,20 @@
     <!--Info Terminos y Condiciones-->
     <div id="overlay">
         <div class="ventana-terminos" id="ventTerminos">
-            <a href="javascript:cerrarVentana('ventTerminos')" class="botonCerrar">
-                <i class="fa fa-times-circle-o fa-2x" aria-hidden="true"></i>
-            </a>
-            <h1>Terminos y Condiciones</h1>
-            <p>El Corporativo Alivio Seguro pone a disposición la herramienta de trabajo con sentido de préstamo, a nuestro colaborador(a) el (la) C.________________________. Quien en adelante se reconocerá como “El COLABORADOR (A)”, quien promete hacer uso responsable de los equipos asignados, en caso contrario se hará acreedor a un acta administrativa, para evitar lo antes mencionado, El COLABORADOR (A) deberá de cumplir con los siguientes lineamientos:
-                El COLABORADOR (A) tiene prohibido:
-                1. Hacer uso de la herramienta para situaciones personales, aplicando principalmente a los equipos móviles, es decir, el equipo prestado, es y será exclusivamente para el uso relacionado con y para la EMPRESA.
-                2. Tiene prohibido la descarga de aplicaciones de la playstore o terceros, con sentido de entretenimiento y multimedia. En caso de ser una situación especial solicitar el VoBo del Director del área asignada, vía correo con copia al área de sistemas.
-                3. El COLABORADOR (A), no pude transferir el (los) equipo (os) sin hacer la notificación debida al departamento de SOPORTE TECNICO.
-                En caso de extravío o pérdida total del equipo, EL COLABORADOR (A) deberá cubrir el costo total de reposición, más una penalización de 500 o 1000 pesos dependiendo del equipo (solo aplica en celulares y laptops), el valor del mismo será determinado por el área de sistemas. En caso de robo, es obligatorio presentar la denuncia para condonar la penalización, de caso contrario, EL COLABORADOR (A) deberá de hacerse responsable del pago total del (los) equipo (os).
-                Términos y Condiciones
-                 EL COLABORADOR (A) tiene la responsabilidad de notificar de manera inmediata al área de sistemas cualquier tema en relación a la herramienta de trabajo asignadas.
-                 En toda asignación EL COLABORADOR (A) tiene como máximo 15 días hábiles para reportar cualquier desperfecto o falla de los equipos asignados, en caso contrario EL COLABORADOR (A) se hará responsable del costo de reparación o bien del costo total del (los) equipo (os).
-                 EL COLABORADOR (A) se comprometerá al cuidado de la herramienta de trabajo reconocida por cantidad, modelo, y número de Folio previamente descritos, en caso contrario podrán aplicar las clausulas antes mencionadas dependiendo de cuál sea el caso.</p>
+            
+            <h1 class="text-center mb-5">Terminos y Condiciones</h1>
+            <p>El Corporativo Alivio Seguro pone a disposición la herramienta de trabajo con sentido de préstamo, a nuestro colaborador(a).
+                Quien en adelante se reconocerá como “El COLABORADOR (A)”, quien promete hacer uso responsable de los equipos asignados, en caso contrario se hará acreedor a un acta administrativa, para evitar lo antes mencionado, El COLABORADOR (A) deberá de cumplir con los siguientes lineamientos:<br><br>
+                El COLABORADOR (A) tiene prohibido:<br><br>
+                1. Hacer uso de la herramienta para situaciones personales, aplicando principalmente a los equipos móviles, es decir, el equipo prestado, es y será exclusivamente para el uso relacionado con y para la EMPRESA.<br><br>
+                2. Tiene prohibido la descarga de aplicaciones de la playstore o terceros, con sentido de entretenimiento y multimedia. En caso de ser una situación especial solicitar el VoBo del Director del área asignada, vía correo con copia al área de sistemas.<br><br>
+                3. El COLABORADOR (A), no pude transferir el (los) equipo (os) sin hacer la notificación debida al departamento de SOPORTE TECNICO.<br><br>
+                En caso de extravío o pérdida total del equipo, EL COLABORADOR (A) deberá cubrir el costo total de reposición, más una penalización de 500 o 1000 pesos dependiendo del equipo (solo aplica en celulares y laptops), el valor del mismo será determinado por el área de sistemas. En caso de robo, es obligatorio presentar la denuncia para condonar la penalización, de caso contrario, EL COLABORADOR (A) deberá de hacerse responsable del pago total del (los) equipo (os).<br><br>
+                
+                * EL COLABORADOR (A) tiene la responsabilidad de notificar de manera inmediata al área de sistemas cualquier tema en relación a la herramienta de trabajo asignadas.<br><br>
+                * En toda asignación EL COLABORADOR (A) tiene como máximo 15 días hábiles para reportar cualquier desperfecto o falla de los equipos asignados, en caso contrario EL COLABORADOR (A) se hará responsable del costo de reparación o bien del costo total del (los) equipo (os).<br><br>
+                * EL COLABORADOR (A) se comprometerá al cuidado de la herramienta de trabajo reconocida por cantidad, modelo, y número de Folio previamente descritos, en caso contrario podrán aplicar las clausulas antes mencionadas dependiendo de cuál sea el caso.<br><br></p>
+                <input  type="button" value="Aceptar" onClick="cerrarVentana('ventTerminos')" class="btn btn-info align-items-center font-weight-bolder float-right mb-2">
         </div>
     </div>
 
@@ -301,7 +301,7 @@
                                     <div class="input-group mb-3 col-md-4">
                                         <div class="input-group-prepend">
                                         <div class="input-group-text">
-                                            <input type="checkbox" name="nuevaAs"  aria-label="Checkbox for following text input" id="nueva_asig">
+                                            <input type="checkbox" name="nuevaAs"  id="nueva_asig" onclick="validarCheckNuevaAsig()">
                                         </div>
                                         </div>
                                         <label for="nueva_asig" class="form-control font-weight-bolder text-black">Nueva Asignacion</label>
@@ -336,8 +336,8 @@
                                     </div>
                                 </div>
                             </div>         
-                            <!--Check Boxes-->
-                            <div id="tipo_solicitud">     
+                            <!--Sección Inferior-->
+                            <div id="seccion">     
                                                             
                                 <div class="form-row mt-5"> 
 

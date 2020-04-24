@@ -83,13 +83,13 @@ h2{
 }
 
 .ventana-terminos{
-  background-color: lightgray;
+  background-color: white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
   overflow: scroll;
   color: black;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  text-align: center;
+  text-align: justify;
   padding: 33px;
   position: fixed;
   z-index: 2;
